@@ -15,19 +15,9 @@ import Contact from "./components/Contact";
 
 
 const App = () => {
-	const isLoading = useSelector((state) => state);
-	const dispatch = useDispatch();
-	useEffect(() => {
-		setTimeout(() => {
-			dispatch(toggleLoading(false))
-		}, 1000);
-		setTimeout(() => {
-			console.log(isLoading);
-		}, 5000);
-	}, []);
 	return (
 		<main className="app">
-			{ isLoading && <Loading />}
+			<Loading />
 			<Menu />
 			<About_me />
 			<Skills />

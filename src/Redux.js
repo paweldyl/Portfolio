@@ -1,7 +1,8 @@
 import { createStore } from "redux";
 
 const initialState = {
-	loading: true
+	loading: true,
+	loading_time: 1500
 }
 
 export const store = createStore(
