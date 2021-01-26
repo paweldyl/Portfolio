@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { store, addTodoAction, toggleLoading } from "./Redux";
+import React from "react";
 
 import Loading from "./components/Loading";
 import Menu from "./components/Menu";

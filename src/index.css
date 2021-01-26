@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
   background-color: #F4F2F4;
+  scroll-behavior: smooth;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -11,7 +15,7 @@ body {
   width: 100%;
   min-height: 80vh;
   position: relative;
-  z-index: 1;
+  scroll-behavior: smooth;
 }
 
 .loading {
@@ -89,7 +93,7 @@ body {
   }
 }
 
-.about-me {
+#about-me {
   width: 100%;
   min-height: 100vh;
   display: -webkit-box;
@@ -107,14 +111,14 @@ body {
           align-items: center;
 }
 
-.about-me .name {
+#about-me .name {
   margin-top: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.about-me .name div {
+#about-me .name div {
   padding: 1.5px;
   font-size: 55px;
   -webkit-transform: translate(0, -50px);
@@ -128,17 +132,17 @@ body {
           transition-duration: 0.6s;
 }
 
-.about-me .name div.show {
+#about-me .name div.show {
   opacity: 1;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
 }
 
-.about-me .name .first-letter-last-name {
+#about-me .name .first-letter-last-name {
   padding-left: 15px;
 }
 
-.about-me .title {
+#about-me .title {
   font-size: 30px;
   margin: 10px;
   display: -webkit-box;
@@ -146,11 +150,11 @@ body {
   display: flex;
 }
 
-.about-me .title .dev {
+#about-me .title .dev {
   margin-left: 10px;
 }
 
-.about-me .title div {
+#about-me .title div {
   -webkit-transform: translate(0, -1000px);
           transform: translate(0, -1000px);
   opacity: 0;
@@ -162,13 +166,13 @@ body {
           transition-duration: 0.6s;
 }
 
-.about-me .title div.show {
+#about-me .title div.show {
   opacity: 1;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
 }
 
-.about-me .text {
+#about-me .text {
   max-width: 90%;
   margin-top: 50px;
   font-size: 22px;
@@ -180,24 +184,24 @@ body {
   text-align: center;
 }
 
-.about-me .text.show {
+#about-me .text.show {
   opacity: 1;
 }
 
-.about-me .text h3 {
+#about-me .text h3 {
   color: green;
 }
 
 @media screen and (min-width: 600px) {
-  .about-me .text {
+  #about-me .text {
     max-width: 70%;
     text-align: justify;
   }
 }
 
-@media screen and (min-width: 950px) {
-  .about-me .text {
-    max-width: 50%;
+@media screen and (min-width: 900px) {
+  #about-me .text {
+    max-width: 60%;
     text-align: justify;
   }
 }
@@ -243,7 +247,7 @@ body {
           transition-duration: .5s;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 900px) {
   .menu .burger-menu {
     display: none;
   }
@@ -296,6 +300,36 @@ body {
   color: white;
 }
 
+@media screen and (min-width: 900px) {
+  .menu .side-nav {
+    min-height: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%);
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+  }
+  .menu .side-nav a {
+    color: black;
+    padding: 15px;
+    border: none;
+  }
+  .menu .side-nav.show {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
 .menu.active .dark-field {
   width: 100%;
 }
@@ -322,5 +356,15 @@ body {
   .menu.active .side-nav {
     width: 60%;
   }
+}
+
+@media screen and (min-width: 900px) {
+  .menu {
+    height: auto;
+  }
+}
+
+#achievements {
+  min-height: 100vh;
 }
 /*# sourceMappingURL=index.css.map */

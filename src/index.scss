@@ -1,17 +1,20 @@
 @import "./variables";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+html{
+	scroll-behavior: smooth;
+}
 body{
 	margin: 0;
 	padding: 0;
-	scroll-behavior: smooth;
 	background-color: $light-bg-color;
+	scroll-behavior: smooth;
 	font-family: 'Open Sans', sans-serif;
 }
 .app{
 	width: 100%;
 	min-height: 80vh;
 	position: relative;
-	z-index: 1;
+	scroll-behavior: smooth;
 }
 .loading{
 	width:100%;
@@ -51,7 +54,7 @@ body{
 		}
 	}
 }
-.about-me{
+#about-me{
 	width: 100%;
 	min-height: 100vh;
 	display: flex;
@@ -118,7 +121,7 @@ body{
 	}
 	@media screen and (min-width: $screen-normal-width){
 		.text{
-			max-width: 50%;
+			max-width: 60%;
 			text-align: justify;
 		}
 	}
@@ -192,6 +195,26 @@ body{
 			color:white;
 		}
 	}
+	@media screen and (min-width:$screen-normal-width){
+		.side-nav{
+			min-height: 0;
+			position: fixed;
+			top:0;
+			width:100%;
+			flex-direction: row;
+			transform:translate(0, -100%);
+			transition-property: transform;
+			transition-duration: .5s;
+			a{
+				color:black;
+				padding:15px;
+				border:none;
+			}
+			&.show{
+				transform:translate(0, 0);
+			}
+		}
+	}
 	&.active{
 		.dark-field{
 			width: 100%;
@@ -216,4 +239,12 @@ body{
 			}
 		}
 	}
+}
+@media screen and (min-width: $screen-normal-width){
+	.menu{
+		height: auto;
+	}
+}
+#achievements{
+	min-height: 100vh;
 }

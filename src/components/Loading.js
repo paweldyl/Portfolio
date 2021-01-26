@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { store, addTodoAction, toggleLoading } from "./../Redux";
+import { store, toggleLoading } from "./../Redux";
 
 const Loading = () => {
 	const isLoading = useSelector((state) => state.loading);
