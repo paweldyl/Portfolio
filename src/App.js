@@ -4,7 +4,7 @@ import Loading from "./components/Loading";
 import Menu from "./components/Menu";
 import About_me from "./components/About_me";
 import Skills from "./components/Skills";
-import Achivements from "./components/Achivements";
+import Achievements from "./components/Achivements";
 import Projects from "./components/Projects";
 import Courses from "./components/Courses";
 import Cv from "./components/Cv";
@@ -19,7 +19,7 @@ const App = () => {
 			<Menu />
 			<About_me />
 			<Skills />
-			<Achivements />
+			<Achievements />
 			<Projects />
 			<Courses />
 			<Cv />

@@ -1,11 +1,13 @@
 import React from "react";
+import Progress_bar from "./Progress_bar";
 
-const Achivements = () => {
+const Achievements = () => {
 	return (
 		<section id="achievements">
-
+			<Progress_bar />
+			asd
 		</section>
 	)
 }
 
-export default Achivements;
+export default Achievements;
