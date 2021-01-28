@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 
-const About_me = () => {
+const AboutMe = () => {
 	const loading_time = useSelector(state => state.loading_time);
 	useEffect(() => {
 		const letters = document.querySelectorAll(".name div");
@@ -38,11 +38,11 @@ const About_me = () => {
 				<div className="dev">Developer</div>
 			</div>
 			<section className='text'>
-				<h3>Kim jestem</h3>
+				<h3 className="section-name">Kim jestem</h3>
 				Jestem początkującym Web Developerem po technikum informatycznym. Przez rok studiowałem informatykę dzienną na Politechnice Śląskiej lecz zrezygnowałem gdyż studia nie pokryły się z moimi zainteresowaniami. Planuje zostać Front-end lub Full-stack Developerem. Aktualnie głównie uczę się Reacta z Reduxem ale w planach mam także opanowanie Node.js oraz Typescript. Opanowałem także podstawy machine learningu i gdyby była taka możliwość interesuje mnie rozwój także w tym kierunku.
 			</section>
 		</section>
 	)
 }
 
-export default About_me;
+export default AboutMe;

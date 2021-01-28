@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import Loading from "./components/Loading";
 import Menu from "./components/Menu";
-import About_me from "./components/About_me";
+import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
 import Achievements from "./components/Achivements";
 import Projects from "./components/Projects";
@@ -13,13 +15,22 @@ import Contact from "./components/Contact";
 
 
 const App = () => {
+	useEffect(() => {
+		Aos.init({ duration: 2000 });
+		document.querySelector(".asd").addEventListener('aos::in', ({ detail }) => {
+			console.log('animated in', detail);
+		});
+		document.addEventListener('aos:out', ({ detail }) => {
+			console.log('animated out', detail);
+		});
+	}, []);
 	return (
 		<main className="app">
 			<Loading />
 			<Menu />
-			<About_me />
-			<Skills />
+			<AboutMe />
 			<Achievements />
+			<Skills />
 			<Projects />
 			<Courses />
 			<Cv />

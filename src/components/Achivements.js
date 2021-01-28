@@ -5,9 +5,8 @@ const Achievements = () => {
 	return (
 		<section id="achievements">
 			<Progress_bar />
-			asd
 		</section>
 	)
 }
 
-export default Achievements;
+export default Achievements;	
