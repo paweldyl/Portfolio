@@ -129,7 +129,6 @@ body{
 }
 .menu{
 	width:100%;
-	height: 100vh;	
 	position: fixed;
 	z-index: 1;
 	.dark-field{
@@ -269,21 +268,83 @@ body{
 	align-items: center;
 	flex-direction: column;
 	width: 100%;	
-	padding:50px;
+	padding-top:50px;
+	padding-bottom:50px;
 	.container{
-		width:60%;
+		width:100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
+		@media screen and (min-width: $screen-normal-width){
+			width:60%;
+		}
 		.skill{
 			text-align: center;
-			margin:35px;
+			width:calc(50% - 40px);
+			margin:20px;
 			font-size: 20px;
 			font-weight: bold;
 			img{
-				width:150px;
-				height: 150px;
+				width:100%;
+				max-width:150px;
+				height:100%;
+				max-width:150px;
+			}
+			@media screen and (min-width: $screen-small-width){
+				width:auto;
+				margin:35px;
+				img{
+					width:150px;
+					height: 150px;
+				}
+			}
+		}
+	}
+}
+.projects{
+	width:100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.project{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width:100%;
+		font-size: 18px;
+		.photo{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width:100%;
+			padding-top:0;	
+			a{
+				width:90%;
+				img{
+					width:100%;
+				}
+			}
+		}
+		.right{
+			width:90%;
+			h3{
+				margin-top:0;
+			}
+			.technologies{
+				display: flex;
+				flex-wrap:wrap;
+				margin-top:20px;
+				div{
+					padding: 10px;
+					background: green;
+					color:white;
+					border-radius: 5px;
+					margin:0 10px 10px 0;
+				}
 			}
 		}
 	}

@@ -209,7 +209,6 @@ body {
 
 .menu {
   width: 100%;
-  height: 100vh;
   position: fixed;
   z-index: 1;
 }
@@ -406,11 +405,12 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .skills .container {
-  width: 60%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -424,15 +424,118 @@ body {
       flex-wrap: wrap;
 }
 
+@media screen and (min-width: 900px) {
+  .skills .container {
+    width: 60%;
+  }
+}
+
 .skills .container .skill {
   text-align: center;
-  margin: 35px;
+  width: calc(50% - 40px);
+  margin: 20px;
   font-size: 20px;
   font-weight: bold;
 }
 
 .skills .container .skill img {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  max-width: 150px;
+  height: 100%;
+  max-width: 150px;
+}
+
+@media screen and (min-width: 600px) {
+  .skills .container .skill {
+    width: auto;
+    margin: 35px;
+  }
+  .skills .container .skill img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.projects {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  font-size: 18px;
+}
+
+.projects .project .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 0;
+}
+
+.projects .project .photo a {
+  width: 90%;
+}
+
+.projects .project .photo a img {
+  width: 100%;
+}
+
+.projects .project .right {
+  width: 90%;
+}
+
+.projects .project .right h3 {
+  margin-top: 0;
+}
+
+.projects .project .right .technologies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.projects .project .right .technologies div {
+  padding: 10px;
+  background: green;
+  color: white;
+  border-radius: 5px;
+  margin: 0 10px 10px 0;
 }
 /*# sourceMappingURL=index.css.map */
