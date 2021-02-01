@@ -1,8 +1,8 @@
 import React from "react";
 
-const Project = ({ src, link, text, title, technologies }) => {
+const Project = ({ src, link, text, title, technologies, which_aos }) => {
 	return (
-		<section className="project">
+		<section className="project" data-aos={which_aos}>
 			<div className="photo">
 				<a href={link} target="blank"><img alt={title} src={src} /></a>
 			</div>

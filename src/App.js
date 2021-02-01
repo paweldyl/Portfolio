@@ -16,7 +16,7 @@ import Contact from "./components/Contact";
 
 const App = () => {
 	useEffect(() => {
-		Aos.init({ duration: 2000 });
+		Aos.init({ duration: 600 });
 		document.querySelector(".asd").addEventListener('aos::in', ({ detail }) => {
 			console.log('animated in', detail);
 		});

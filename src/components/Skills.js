@@ -2,7 +2,7 @@ import React from "react";
 import Skill from "./Skill";
 const Skills = () => {
 	return (
-		<section className="skills">
+		<section id="skills">
 			<h3 className="section-name" data-aos="fade-up">Umiejętności</h3>
 			<div className="container">
 				<Skill src="html.png" name="HTML" />

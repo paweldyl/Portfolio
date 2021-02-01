@@ -16,6 +16,7 @@ body {
   min-height: 80vh;
   position: relative;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 .section-name {
@@ -390,7 +391,7 @@ body {
           transform-origin: 50% 50%;
 }
 
-.skills {
+#skills {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -409,7 +410,7 @@ body {
   padding-bottom: 50px;
 }
 
-.skills .container {
+#skills .container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -425,12 +426,12 @@ body {
 }
 
 @media screen and (min-width: 900px) {
-  .skills .container {
+  #skills .container {
     width: 60%;
   }
 }
 
-.skills .container .skill {
+#skills .container .skill {
   text-align: center;
   width: calc(50% - 40px);
   margin: 20px;
@@ -438,7 +439,7 @@ body {
   font-weight: bold;
 }
 
-.skills .container .skill img {
+#skills .container .skill img {
   width: 100%;
   max-width: 150px;
   height: 100%;
@@ -446,19 +447,19 @@ body {
 }
 
 @media screen and (min-width: 600px) {
-  .skills .container .skill {
+  #skills .container .skill {
     width: auto;
     margin: 35px;
   }
-  .skills .container .skill img {
+  #skills .container .skill img {
     width: 150px;
     height: 150px;
   }
 }
 
-.projects {
+#projects {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -474,7 +475,7 @@ body {
           flex-direction: column;
 }
 
-.projects .project {
+#projects .project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,9 +491,124 @@ body {
           flex-direction: column;
   width: 100%;
   font-size: 18px;
+  margin: 40px 0 40px 0;
 }
 
-.projects .project .photo {
+@media screen and (min-width: 900px) {
+  #projects .project {
+    min-width: 900px;
+    width: 60%;
+    max-width: 1400px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  #projects .project:nth-child(2n) {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-right: 50px;
+  }
+  #projects .project:nth-child(2n-1) {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin-left: 50px;
+  }
+}
+
+#projects .project .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding-top: 0;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 900px) {
+  #projects .project .photo {
+    margin-bottom: 0;
+    margin-right: 25px;
+  }
+}
+
+#projects .project .photo a {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100%;
+  overflow: hidden;
+}
+
+#projects .project .photo a img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.3s -webkit-transform;
+  transition: 0.3s -webkit-transform;
+  transition: 0.3s transform;
+  transition: 0.3s transform, 0.3s -webkit-transform;
+}
+
+#projects .project .photo a img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#projects .project .right {
+  width: 90%;
+}
+
+@media screen and (min-width: 900px) {
+  #projects .project .right {
+    height: 100%;
+  }
+}
+
+#projects .project .right h3 {
+  margin-top: 0;
+}
+
+#projects .project .right .technologies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+#projects .project .right .technologies div {
+  padding: 10px;
+  background: green;
+  color: white;
+  border-radius: 5px;
+  margin: 0 10px 10px 0;
+}
+
+#courses {
+  width: 100%;
+  padding: 40px 0 40px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -502,40 +618,48 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  padding-top: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.projects .project .photo a {
-  width: 90%;
-}
-
-.projects .project .photo a img {
-  width: 100%;
-}
-
-.projects .project .right {
-  width: 90%;
-}
-
-.projects .project .right h3 {
-  margin-top: 0;
-}
-
-.projects .project .right .technologies {
+#courses .course {
+  width: calc(100% - 30px);
+  padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.projects .project .right .technologies div {
-  padding: 10px;
-  background: green;
-  color: white;
-  border-radius: 5px;
-  margin: 0 10px 10px 0;
+#courses .course .img {
+  width: 50%;
+}
+
+#courses .course .img img {
+  width: 100%;
+}
+
+#courses .course .container {
+  width: 100%;
+  text-align: center;
+  margin: 15px;
+}
+
+#courses .course .container .title {
+  font-size: 1.3em;
+  margin-bottom: 5px;
 }
 /*# sourceMappingURL=index.css.map */
