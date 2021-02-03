@@ -3,16 +3,11 @@ import Project from "./Project";
 
 const Projects = () => {
 	const [counter, setCounter] = useState(0);
-	const which_aos = () => {
-		setCounter(prevState => prevState + 1);
-		if (counter % 2 === 0) return "slide-right";
-		if (counter % 2 === 1) return "slide-left";
-	}
 	return (
 		<section id="projects">
 			<Project
 				src="pomidoro-app.jpg"
-				link="https://www.wp.pl"
+				link="https://pomodoro-site.netlify.app/"
 				title="Pomodoro"
 				text="Aplikacja do efektywniejszego dysponowania czasem z minimalistycznym ale eleganckim wyglądem, wbudowaną to-do listą oraz możliwością dostosowania do własnych potrzeb."
 				technologies={["HTML", "CSS", "Javascript", "React", "RWD"]}
@@ -20,7 +15,7 @@ const Projects = () => {
 			/>
 			<Project
 				src="commercial-site.jpg"
-				link="https://www.wp.pl"
+				link="https://commercial-site.netlify.app/"
 				title="Komercyjna strona"
 				text="Jest to przykład profesjonalnie wyglądającej, responsywnej strony internetowej."
 				technologies={["HTML", "CSS", "Javascript", "RWD"]}
@@ -28,7 +23,7 @@ const Projects = () => {
 			/>
 			<Project
 				src="sort-app.jpg"
-				link="https://www.wp.pl"
+				link="https://sortnet.netlify.app/"
 				title="Aplikacja sortująca"
 				text="Aplikacja pokazuje działanie wybranych metod sortowania."
 				technologies={["HTML", "CSS", "Javascript", "React"]}
@@ -36,7 +31,7 @@ const Projects = () => {
 			/>
 			<Project
 				src="paper-rock-scisors.jpg"
-				link="https://www.wp.pl"
+				link="https://rockweb.netlify.app/"
 				title="Kamień papier nożyce"
 				text="Gra w kamień papier nożyce."
 				technologies={["HTML", "CSS", "Javascript", "React", "RWD"]}
@@ -44,7 +39,7 @@ const Projects = () => {
 			/>
 			<Project
 				src="calculator.jpg"
-				link="https://www.wp.pl"
+				link="https://calcweb.netlify.app/"
 				title="Kalkulator"
 				text="Kalkulator zrobiony z pomocą Reacta."
 				technologies={["HTML", "CSS", "Javascript", "React"]}

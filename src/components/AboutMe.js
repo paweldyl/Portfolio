@@ -20,7 +20,7 @@ const AboutMe = () => {
 			document.querySelector(".text").classList.add("show");
 			document.querySelector(".side-nav").classList.add("show");
 		}, loading_time + 900 + 150 * letters.length);
-	}, []);
+	}, [loading_time]);
 	return (
 		<section id="about-me">
 			<div className="name">

@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { store, toggleLoading } from "./../Redux";
+import { toggleLoading } from "../Redux";
 
 const Loading = () => {
-	const isLoading = useSelector((state) => state.loading);
+	const isLoading = useSelector(state => state.loading);
 	const loading_time = useSelector(state => state.loading_time);
 	const dispatch = useDispatch();
 	useEffect(() => {
 		setTimeout(() => {
 			dispatch(toggleLoading(false))
-		}, loading_time);
+		}, loading_time, dispatch);
 	}, []);
 	return (
 		<div className={isLoading ? 'loading' : 'loading dissapear'}>
