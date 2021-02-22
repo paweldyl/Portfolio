@@ -1,9 +1,14 @@
 import React from "react";
 import Skill from "./Skill";
+import { useSelector } from "react-redux";
+
 const Skills = () => {
+	const language = useSelector(state => state.language);
+	const dictionary = useSelector(state => state.dictionary);
+
 	return (
 		<section id="skills">
-			<h3 className="section-name" data-aos="fade-up">Umiejętności</h3>
+			<h3 className="section-name" data-aos="fade-up">{dictionary[language]["skills"]}</h3>
 			<div className="container">
 				<Skill src="html.png" name="HTML" />
 				<Skill src="css.png" name="CSS" />

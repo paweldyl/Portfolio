@@ -322,6 +322,24 @@ body {
   border-bottom: 1px solid black;
 }
 
+.menu .side-nav a.menu-select {
+  max-width: 100%;
+}
+
+.menu .side-nav a.menu-select:hover {
+  background-color: transparent;
+}
+
+.menu .side-nav a select {
+  text-align: center;
+  background-color: transparent;
+  border: none;
+}
+
+.menu .side-nav a select:focus {
+  border-radius: 0;
+}
+
 .menu .side-nav a:last-child {
   border-bottom: none;
 }

@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 const Menu = () => {
 
 	const dark_theme = useSelector(state => state.dark_theme);
+	const language = useSelector(state => state.language);
+	const dictionary = useSelector(state => state.dictionary);
 	const [sideMenu, setSideMenu] = useState(window.innerWidth < 900);
 	const dispatch = useDispatch();
 
@@ -48,14 +50,20 @@ const Menu = () => {
 
 			</nav>
 			<nav className="side-nav">
-				<a href="#about-me" onClick={sideMenu ? show_menu : null}>About me</a>
-				<a href="#achievements" onClick={sideMenu ? show_menu : null}>Wyniki</a>
-				<a href="#skills" onClick={sideMenu ? show_menu : null}>Umiejętności</a>
-				<a href="#projects" onClick={sideMenu ? show_menu : null}>Projekty</a>
-				<a href="#books" onClick={sideMenu ? show_menu : null}>Książki</a>
-				<a href="#courses" onClick={sideMenu ? show_menu : null}>Kursy</a>
-				<a href="#cv" onClick={sideMenu ? show_menu : null}>Cv</a>
-				<a href="#contact" onClick={sideMenu ? show_menu : null}>Kontakt</a>
+				<a href="#about-me" onClick={sideMenu ? show_menu : null}>{dictionary[language]["about_me"]}</a>
+				<a href="#achievements" onClick={sideMenu ? show_menu : null}>{dictionary[language]["exams"]}</a>
+				<a href="#skills" onClick={sideMenu ? show_menu : null}>{dictionary[language]["skills"]}</a>
+				<a href="#projects" onClick={sideMenu ? show_menu : null}>{dictionary[language]["projects"]}</a>
+				<a href="#books" onClick={sideMenu ? show_menu : null}>{dictionary[language]["books"]}</a>
+				<a href="#courses" onClick={sideMenu ? show_menu : null}>{dictionary[language]["courses"]}</a>
+				<a href="#cv" onClick={sideMenu ? show_menu : null}>{dictionary[language]["resume"]}</a>
+				<a href="#contact" onClick={sideMenu ? show_menu : null}>{dictionary[language]["contact"]}</a>
+				<a className="menu-select">
+					<select name="lang" onChange={sideMenu ? show_menu : null}>
+						<option value="pl">PL</option>
+						<option value="en">ENG</option>
+					</select>
+				</a>
 				<a className="theme-switch" onClick={() => change_theme()}>
 					<img alt="dark theme" id="sun" src="sun.png" />
 					<img alt="dark theme" id="moon" src="moon.png" />

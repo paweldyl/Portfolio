@@ -211,6 +211,20 @@ body{
 			text-align: center;
 			padding:10px;
 			border-bottom: 1px solid black;
+			&.menu-select{
+				max-width: 100%;
+				&:hover{
+					background-color: transparent;
+				}
+			}
+			select{
+				text-align: center;
+				background-color: transparent;
+				border:none;
+				&:focus{
+					border-radius: 0;
+				}
+			}
 		}
 		a:last-child{
 			border-bottom: none;

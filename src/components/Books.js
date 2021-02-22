@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import Book from "./Book";
 import BooksData from "./BooksData";
+import { useSelector } from "react-redux";
 
 const Books = () => {
 
+    const language = useSelector(state => state.language);
+    const dictionary = useSelector(state => state.dictionary);
     const [currBook, setCurrBook] = useState(0);
 
     const nextSlide = () => {
@@ -15,7 +17,7 @@ const Books = () => {
 
     return (
         <section id="books" data-aos="fade-up">
-            <h3 className="section-name" data-aos="fade-up">Przeczytane książki</h3>
+            <h3 className="section-name" data-aos="fade-up">{dictionary[language]["readed_books"]}</h3>
             <div className="slider">
                 <a href={BooksData[currBook].link} target="blank">
                     <img src={BooksData[currBook].src} />
@@ -24,8 +26,8 @@ const Books = () => {
                 <img src="arrow-right.png" className="arrow left" onClick={prevSlide} />
             </div>
             <div className="text">
-                <h3>{BooksData[currBook].name}</h3>
-                <p>{BooksData[currBook].description}</p>
+                <h3>{language === "pl" ? BooksData[currBook].name : BooksData[currBook].en_name}</h3>
+                <p>{language === "pl" ? BooksData[currBook].description : BooksData[currBook].en_description}</p>
             </div>
         </section>
     )
