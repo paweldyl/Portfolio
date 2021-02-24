@@ -4,7 +4,7 @@ const initialState = {
 	loading: true,
 	loading_time: 1500,
 	dark_theme: false,
-	language: "en",
+	language: "pl",
 	dictionary: {
 		pl: {
 			about_me: "O mnie",
@@ -34,7 +34,9 @@ const initialState = {
 			cs_harvard: "Kurs jest wprowadzeniem do programowania. Głównym językiem używanym w kursie jest język c ale pojawia się tam także chociażby Python a wraz z nim Flask.",
 			rc_ziroll: "Kurs wprowadzający do Reacta, przedstawia takie zagadnienia jak props,states, renderowanie warunkowe, kontrolowane inputy, przechwytywanie danych z API i wiele innych.",
 			rc_smilga: "Kurs Reacta przedstawiający nowoczesne zagadnienia aktualnie używane w projektach takie jak Hooks, Context API, React Router, Custom Hooks itd.",
-			redux_mosh: "Kurs przedstawiający podstawowe zagadnienia związane z Reduxem."
+			redux_mosh: "Kurs przedstawiający podstawowe zagadnienia związane z Reduxem.",
+			download_resume: "pobierz cv",
+			phone: "telefon"
 		},
 		en: {
 			about_me: "About me",
@@ -64,7 +66,9 @@ const initialState = {
 			cs_harvard: "The course is an introduction to programming. The main language used in the course is c, but there is also for example Python and Flask with it.",
 			rc_ziroll: "The introductory course on React. It covers topics such as props, states, conditional rendering, controlled inputs, API data capture and many more.",
 			rc_smilga: "React course presenting modern topics currently used in projects such as Hooks, Context API, React Router, Custom Hooks etc.",
-			redux_mosh: "The course presents the basic issues related to Redux."
+			redux_mosh: "The course presents the basic issues related to Redux.",
+			download_resume: "Download resume",
+			phone: "phone"
 		}
 	}
 }
@@ -105,7 +109,7 @@ export const toggleTheme = set_to => ({
 	payload: set_to
 })
 
-export const setLanguage = set_to => ({
+export const setLanguageAction = set_to => ({
 	type: 'SET_LANGUAGE',
 	payload: set_to
 })

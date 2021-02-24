@@ -323,21 +323,28 @@ body {
 }
 
 .menu .side-nav a.menu-select {
-  max-width: 100%;
+  width: 80px;
 }
 
 .menu .side-nav a.menu-select:hover {
   background-color: transparent;
 }
 
-.menu .side-nav a select {
+.menu .side-nav a.menu-select select {
   text-align: center;
   background-color: transparent;
   border: none;
+  outline: none;
 }
 
-.menu .side-nav a select:focus {
+.menu .side-nav a.menu-select select option {
+  background-color: white;
+}
+
+.menu .side-nav a.menu-select select:focus {
   border-radius: 0;
+  border: none;
+  outline: none;
 }
 
 .menu .side-nav a:last-child {
@@ -364,6 +371,14 @@ body {
 }
 
 .menu.dark-theme .side-nav a:hover {
+  background-color: #363637;
+}
+
+.menu.dark-theme .side-nav a.menu-select select {
+  color: white;
+}
+
+.menu.dark-theme .side-nav a.menu-select select option {
   background-color: #363637;
 }
 
@@ -398,6 +413,12 @@ body {
     transition: background-color 1s, -webkit-transform .5s;
     transition: transform .5s, background-color 1s;
     transition: transform .5s, background-color 1s, -webkit-transform .5s;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
   }
   .menu .side-nav .theme-switch {
     width: 50px;
@@ -434,6 +455,7 @@ body {
             transition-delay: 0s;
   }
   .menu .side-nav a {
+    display: block;
     width: 12.5%;
     color: black;
     padding: 15px;
