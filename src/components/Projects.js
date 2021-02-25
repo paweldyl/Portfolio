@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 const Projects = () => {
 	const language = useSelector(state => state.language);
 	const dictionary = useSelector(state => state.dictionary);
+
 	return (
 		<section id="projects">
 			{

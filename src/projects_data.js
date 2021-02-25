@@ -14,7 +14,7 @@ const projects = [
         title: "Pomodoro",
         en_title: "Pomodoro",
         text: "An app for more efficient time management with a minimalistic but elegant design, a built-in to-do list and the ability to customize it to your needs.",
-        en_text: "Pomodoro helps to more effiecie",
+        en_text: "Pomodoro helps to learn and work more effiecient",
         technologies: ["HTML", "CSS", "Javascript", "React", "RWD"]
     },
     {
@@ -55,7 +55,7 @@ const projects = [
     },
     {
         src: "adobe-color.jpg",
-        link: "https://www.wp.pl",
+        link: "https://adobe-clone.netlify.app/",
         title: "Adobe color klon",
         en_title: "Adobe color clone",
         text: "Jeden z pierwszych projektów, klon adobe color bez częsci funkcjonalności.",

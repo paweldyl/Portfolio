@@ -6,7 +6,7 @@ const Cv = () => {
 	const dictionary = useSelector(state => state.dictionary);
 	return (
 		<section id="cv" data-aos="fade-up">
-			<a href="CV_Paweł_Dyl.pdf" download>Pobierz Cv</a>
+			<a href="CV_Paweł_Dyl.pdf" download>{dictionary[language]["download_resume"]}</a>
 		</section>
 	)
 }

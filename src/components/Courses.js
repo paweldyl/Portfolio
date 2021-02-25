@@ -7,7 +7,7 @@ const Courses = () => {
 	const dictionary = useSelector(state => state.dictionary);
 	return (
 		<section id="courses">
-			<h3 className="section-name" data-aos="fade-up">Kursy</h3>
+			<h3 className="section-name" data-aos="fade-up">{dictionary[language]["courses"]}</h3>
 			<div className="courses-container">
 				<Course
 					img="mlcourse.png"
