@@ -1,6 +1,6 @@
 const projects = [
     {
-        src: "movies-app.jpg",
+        src: "images/movies-app.jpg",
         link: "https://pd-movies.netlify.app/",
         title: "Movies",
         en_title: "Movies",
@@ -9,7 +9,7 @@ const projects = [
         technologies: ["HTML", "CSS", "RWD", "SASS", "Javascript", "React", "Redux"]
     },
     {
-        src: "pomidoro-app.jpg",
+        src: "images/pomidoro-app.jpg",
         link: "https://pomodoro-site.netlify.app/",
         title: "Pomodoro",
         en_title: "Pomodoro",
@@ -18,7 +18,7 @@ const projects = [
         technologies: ["HTML", "CSS", "Javascript", "React", "RWD"]
     },
     {
-        src: "commercial-site.jpg",
+        src: "images/commercial-site.jpg",
         link: "https://commercial-site.netlify.app/",
         title: "Komercyjna strona",
         en_title: "Commercial Site",
@@ -27,7 +27,7 @@ const projects = [
         technologies: ["HTML", "CSS", "Javascript", "RWD"]
     },
     {
-        src: "sort-app.jpg",
+        src: "images/sort-app.jpg",
         link: "https://sortnet.netlify.app/",
         title: "Aplikacja sortująca",
         en_title: "Sorting application",
@@ -36,7 +36,7 @@ const projects = [
         technologies: ["HTML", "CSS", "Javascript", "React"]
     },
     {
-        src: "paper-rock-scisors.jpg",
+        src: "images/paper-rock-scisors.jpg",
         link: "https://rockweb.netlify.app/",
         title: "Kamień papier nożyce",
         en_title: "Rock paper scisors",
@@ -45,7 +45,7 @@ const projects = [
         technologies: ["HTML", "CSS", "Javascript", "React", "RWD"]
     },
     {
-        src: "calculator.jpg",
+        src: "images/calculator.jpg",
         link: "https://calcweb.netlify.app/",
         title: "Kalkulator",
         en_title: "calculator",
@@ -54,7 +54,7 @@ const projects = [
         technologies: ["HTML", "CSS", "Javascript", "React"]
     },
     {
-        src: "adobe-color.jpg",
+        src: "images/adobe-color.jpg",
         link: "https://adobe-clone.netlify.app/",
         title: "Adobe color klon",
         en_title: "Adobe color clone",

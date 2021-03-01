@@ -22,8 +22,8 @@ const Books = () => {
                 <a href={BooksData[currBook].link} target="blank">
                     <img src={BooksData[currBook].src} />
                 </a>
-                <img src="arrow-right.png" className="arrow right" onClick={nextSlide} />
-                <img src="arrow-right.png" className="arrow left" onClick={prevSlide} />
+                <img src="images/arrow-right.png" className="arrow right" onClick={nextSlide} />
+                <img src="images/arrow-right.png" className="arrow left" onClick={prevSlide} />
             </div>
             <div className="text">
                 <h3>{language === "pl" ? BooksData[currBook].name : BooksData[currBook].en_name}</h3>

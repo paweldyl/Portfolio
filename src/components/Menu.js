@@ -64,8 +64,8 @@ const Menu = () => {
 				<a href="#cv" onClick={sideMenu ? show_menu : null}>{dictionary[language]["resume"]}</a>
 				<a href="#contact" onClick={sideMenu ? show_menu : null}>{dictionary[language]["contact"]}</a>
 				<a className="theme-switch" onClick={() => change_theme()}>
-					<img alt="dark theme" id="sun" src="sun.png" />
-					<img alt="dark theme" id="moon" src="moon.png" />
+					<img alt="light theme" id="sun" src="images/sun.png" />
+					<img alt="dark theme" id="moon" src="images/moon.png" />
 				</a>
 				<a className="menu-select">
 					<select name="lang" value={language} onChange={selectChange}>
