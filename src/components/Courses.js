@@ -44,6 +44,13 @@ const Courses = () => {
 					src="https://youtu.be/poQXNp9ItL4"
 					description={dictionary[language]["redux_mosh"]}
 				/>
+				<Course
+					img="images/clean-code.webp"
+					title="Clean Code"
+					by="Academind"
+					src="https://youtu.be/poQXNp9ItL4"
+					description={dictionary[language]["clean_code"]}
+				/>
 			</div>
 		</section>
 	)

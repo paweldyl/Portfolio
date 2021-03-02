@@ -36,6 +36,7 @@ const initialState = {
 			rc_ziroll: "Kurs wprowadzający do Reacta, przedstawia takie zagadnienia jak props,states, renderowanie warunkowe, kontrolowane inputy, przechwytywanie danych z API i wiele innych.",
 			rc_smilga: "Kurs Reacta przedstawiający nowoczesne zagadnienia aktualnie używane w projektach takie jak Hooks, Context API, React Router, Custom Hooks itd.",
 			redux_mosh: "Kurs przedstawiający podstawowe zagadnienia związane z Reduxem.",
+			clean_code: "Kurs uczy jak pisać czysty, łatwy w zrozumieniu i utrzymaniu kod.",
 			download_resume: "pobierz cv",
 			phone: "telefon"
 		},
@@ -69,6 +70,7 @@ const initialState = {
 			rc_ziroll: "The introductory course on React. It covers topics such as props, states, conditional rendering, controlled inputs, API data capture and many more.",
 			rc_smilga: "React course presenting modern topics currently used in projects such as Hooks, Context API, React Router, Custom Hooks etc.",
 			redux_mosh: "The course presents the basic issues related to Redux.",
+			clean_code: "Course teaches how to write readable, understandable and therefore maintainable, clean code.",
 			download_resume: "Download resume",
 			phone: "phone"
 		}
