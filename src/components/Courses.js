@@ -48,8 +48,15 @@ const Courses = () => {
 					img="images/clean-code.webp"
 					title="Clean Code"
 					by="Academind"
-					src="https://youtu.be/poQXNp9ItL4"
+					src="https://pro.academind.com/p/clean-code"
 					description={dictionary[language]["clean_code"]}
+				/>
+				<Course
+					img="images/git.webp"
+					title="Git"
+					by="Academind"
+					src="https://pro.academind.com/p/git-github-the-practical-guide"
+					description={dictionary[language]["git"]}
 				/>
 			</div>
 		</section>

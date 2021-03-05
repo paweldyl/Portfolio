@@ -37,6 +37,7 @@ const initialState = {
 			rc_smilga: "Kurs Reacta przedstawiający nowoczesne zagadnienia aktualnie używane w projektach takie jak Hooks, Context API, React Router, Custom Hooks itd.",
 			redux_mosh: "Kurs przedstawiający podstawowe zagadnienia związane z Reduxem.",
 			clean_code: "Kurs uczy jak pisać czysty, łatwy w zrozumieniu i utrzymaniu kod.",
+			git: "Praktyczny kurs jak kożystać z Gita oraz GitHuba.",
 			download_resume: "pobierz cv",
 			phone: "telefon"
 		},
@@ -71,6 +72,7 @@ const initialState = {
 			rc_smilga: "React course presenting modern topics currently used in projects such as Hooks, Context API, React Router, Custom Hooks etc.",
 			redux_mosh: "The course presents the basic issues related to Redux.",
 			clean_code: "Course teaches how to write readable, understandable and therefore maintainable, clean code.",
+			git: "Practical guide how to manage projects with Git & GitHub.",
 			download_resume: "Download resume",
 			phone: "phone"
 		}
